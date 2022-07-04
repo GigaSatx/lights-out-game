@@ -1,0 +1,29 @@
+const board1 = [];
+const boolArr = [true, false];
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    const rand = Math.floor(Math.random() * 2);
+    board1.push(boolArr[rand]);
+  }
+}
+
+var board3 = new Array(3);
+console.log(board1, board3);
+
+var newArr = [...Array(3)].map((e) => Array(3));
+console.log(newArr);
+
+var board4 = [];
+for (let i = 0; i < 3; i++) {
+  let row = [];
+  for (let j = 0; j < 3; j++) {
+    row.push(Math.random() < 0.5);
+  }
+  board4.push(row);
+}
+console.log(board4);
+
+const array = Array.from({ length: 3 }).map((e) => Array.from({ length: 3 }));
+console.log(array);
+
+const arr = Array.from({ length: 3 }).map((e, i) => console.log(i));
